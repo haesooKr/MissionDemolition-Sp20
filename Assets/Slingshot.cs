@@ -52,7 +52,7 @@ public class Slingshot : MonoBehaviour
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
         if(mouseDelta.magnitude > maxMagnitude)
         {
-            mouseDelta.Normalize();
+            mouseDelta.Normalize(); // sets the length of mouseDelta to 1
             mouseDelta *= maxMagnitude;
         }
 
@@ -64,6 +64,7 @@ public class Slingshot : MonoBehaviour
             aimingMode = false;
             projectileRigidBody.isKinematic = false;
             projectileRigidBody.velocity = -mouseDelta * velocityMult;
+            FollowCam.POI = projectile;
             projectile = null;
         }
     }
