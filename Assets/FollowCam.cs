@@ -8,6 +8,7 @@ public class FollowCam : MonoBehaviour
 
     [Header("Set in Inspector")]
     public float easing = 0.05f;
+    public Vector2 minXY = Vector2.zero;
     
 
     [Header("Set Dynamically")]
@@ -22,6 +23,8 @@ public class FollowCam : MonoBehaviour
         if (POI == null) return;
 
         Vector3 destination = POI.transform.position;
+        destination.x = Mathf.Max(minXY.x, destination.x);
+        destination.y = Mathf.Max(minXY.y, destination.y);
         destination = Vector3.Lerp(transform.position, destination, easing);
         destination.z = camZ;
         transform.position = destination;
