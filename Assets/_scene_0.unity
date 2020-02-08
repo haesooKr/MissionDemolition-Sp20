@@ -305,7 +305,6 @@ GameObject:
   - component: {fileID: 905954489}
   - component: {fileID: 905954492}
   - component: {fileID: 905954491}
-  - component: {fileID: 905954490}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -327,20 +326,6 @@ Transform:
   m_Father: {fileID: 2065712088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &905954490
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905954488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &905954491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -358,7 +343,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8570c1ec8ec35848800abbaf9bab7a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
