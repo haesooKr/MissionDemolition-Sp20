@@ -54,7 +54,7 @@ public class MissionDemolition : MonoBehaviour
         castle.transform.position = castlePos;
         shotsTaken = 0;
 
-        SwitchView("wShow Both");
+        SwitchView("Show Both");
         ProjectileLine.S.Clear();
 
         Goal.goalMet = false;
@@ -74,7 +74,7 @@ public class MissionDemolition : MonoBehaviour
     {
         UpdateGUI();
 
-        if( (mode == GameMode.playing) && Goal.goalMet)
+        if ( (mode == GameMode.playing) && Goal.goalMet)
         {
             mode = GameMode.levelEnd;
             SwitchView("Show Both");
