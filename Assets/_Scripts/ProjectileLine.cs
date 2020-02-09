@@ -48,6 +48,7 @@ public class ProjectileLine : MonoBehaviour
     public void AddPoint()
     {
         Vector3 pt = _poi.transform.position;
+        
         if(points.Count > 0 && (pt - lastPoint).magnitude < minDist)
         {
             return;
@@ -94,12 +95,16 @@ public class ProjectileLine : MonoBehaviour
                 {
                     return;
                 }
-            }
-            AddPoint();
-            if(FollowCam.POI == null)
+            } else
             {
-                poi = null;
+                return;
             }
         }
+        AddPoint();
+        if(FollowCam.POI == null)
+        {
+            poi = null;
+        }
     }
+
 }
